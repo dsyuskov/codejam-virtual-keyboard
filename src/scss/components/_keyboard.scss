@@ -21,9 +21,15 @@
   height: 3em;  
   border: 1px solid black;
   border-radius: 0.5em;
+  background-color: #818181;
 }
+
+.pressed {
+  background-color: red;
+}
+
 .backspace {
-  width: 6em;
+  width: 6em; 
 }
 
 .tab {
