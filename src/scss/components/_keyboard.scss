@@ -2,22 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 60em;
-  height: 20em;
-  margin: 0 auto;  
+  width: $keyboard-width;
+  height: $keyboard-height;
+  margin: 0 auto;
 }
 
 .row {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
-.key {  
+.key {
   display: flex;
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: $key-width;  
+  width: $key-width;
   height: $key-height;
   border: 1px solid $key-border-color;
   border-radius: 0.5em;
@@ -25,34 +25,30 @@
 }
 
 .backspace {
-  width: 6em; 
-  background-color: $key-color-function;  
+  width: $key-width * 2;
+  background-color: $key-color-function;
 }
 
 .backslash,
 .tab {
-  width: 4.5em;
-  background-color: $key-color-function;  
+  width: $key-width * 1.5;
+  background-color: $key-color-function;
 }
 
 .capslock {
-  width: 5em;
-  background-color: $key-color-function;  
+  width: $key-width * 1.7;
+  background-color: $key-color-function;
 }
 
+.shiftleft,
 .enter {
-  width: 7em;
-  background-color: $key-color-function;  
-}
-
-.shiftleft {
-  width: 7em;
-  background-color: $key-color-function;  
+  width: $key-width * 2.3;
+  background-color: $key-color-function;
 }
 
 .shiftright {
-  width: 9em;
-  background-color: $key-color-function;  
+  width: $key-width * 3;
+  background-color: $key-color-function;
 }
 
 .altleft,
@@ -63,12 +59,12 @@
 .controlright
  {
   background-color: $key-color-function;
-  width: 4em;
+  width: $key-width * 1.3;
 }
 
 .space {
-  width: 28em;
-  background-color: $key-color-function;  
+  width: $key-width * 9.3;
+  background-color: $key-color-function;
 }
 
 .pressed {

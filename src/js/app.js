@@ -68,7 +68,7 @@ const keys = [
     ['AltLeft', 'Alt', 'Alt', 'Alt', 'Alt'],
     ['Space', '', '', '', ''],
     ['AltRight', 'Alt', 'Alt', 'Alt', 'Alt'],
-    ['MetaRight', 'Win', 'Win', 'Win', 'Win'],
+    ['MetaRight', 'en', 'en', 'ru', 'ru'],
     ['ControlRight', 'Control', 'Control', 'Control', 'Control'],
   ],
 ];
@@ -78,6 +78,7 @@ let isCapsLock = false;
 let prevKey;
 let keyboard;
 let lang = localStorage.getItem('lang') !== 'false';
+let drawKeyboard;
 
 const blocknote = document.createElement('textarea');
 blocknote.className = 'blocknote';
@@ -139,6 +140,12 @@ function keyDown(keyCode) {
       keyboard = drawKeyboard();
       break;
     }
+    case 'MetaRight': {
+      lang = !lang;
+      keyboard.remove();
+      keyboard = drawKeyboard();
+      break;
+    }
     default:
   }
   const key = document.querySelector(`.${keyCode.toLowerCase()}`);
@@ -166,7 +173,7 @@ function keyUp(keyCode) {
   prevKey = undefined;
 }
 
-function drawKeyboard() {
+drawKeyboard = function drawkeyboard() {
   let indexOfArray = 1;
   if (isShift || isCapsLock) {
     indexOfArray = 2;
@@ -199,7 +206,7 @@ function drawKeyboard() {
     });
   });
   return keyBoard;
-}
+};
 
 keyboard = drawKeyboard();
 
