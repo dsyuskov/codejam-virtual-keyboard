@@ -148,7 +148,6 @@ function keyDown(keyCode) {
   }
   prevKey = keyCode;
   localStorage.setItem('lang', lang);
-  console.log(lang);
 }
 
 function keyUp(keyCode) {
@@ -166,7 +165,6 @@ function keyUp(keyCode) {
   }
   prevKey = undefined;
 }
-
 
 function drawKeyboard() {
   let indexOfArray = 1;

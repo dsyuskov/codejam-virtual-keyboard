@@ -17,67 +17,60 @@
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 3em;
-  height: 3em;  
-  border: 1px solid black;
+  width: $key-width;  
+  height: $key-height;
+  border: 1px solid $key-border-color;
   border-radius: 0.5em;
-  background-color: #818181;
-}
-
-.pressed {
-  background-color: red;
+  background-color: $key-color;
 }
 
 .backspace {
   width: 6em; 
+  background-color: $key-color-function;  
 }
 
+.backslash,
 .tab {
   width: 4.5em;
-}
-
-.backslash {
-  width: 4.5em;
+  background-color: $key-color-function;  
 }
 
 .capslock {
   width: 5em;
+  background-color: $key-color-function;  
 }
 
 .enter {
   width: 7em;
+  background-color: $key-color-function;  
 }
 
 .shiftleft {
   width: 7em;
+  background-color: $key-color-function;  
 }
 
 .shiftright {
   width: 9em;
+  background-color: $key-color-function;  
 }
 
-.controlleft {
-  width: 4em;
-}
-
-.metaleft {
-  width: 4em;
-}
-
-.altleft {
+.altleft,
+.altright,
+.metaleft,
+.metaright,
+.controlleft,
+.controlright
+ {
+  background-color: $key-color-function;
   width: 4em;
 }
 
 .space {
   width: 28em;
+  background-color: $key-color-function;  
 }
 
-.altright {
-  width: 4em;
-}
-.metaright {
-  width: 4em;
-}
-.controlright {
-  width: 4em;
+.pressed {
+  background-color: $key-color-pressed;
 }
